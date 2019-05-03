@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generatedailymealplanactivity.GenDailyMealPlanActivity">
+
+    <LinearLayout
+        android:id="@+id/dayRecyclerViewLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <LinearLayout
+            android:id="@+id/pickDatesMenuFrame"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@android:color/darker_gray"
+            android:backgroundTint="@android:color/darker_gray"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/pickDatesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:onClick="goToPickDates"
+                android:src="@drawable/pickdatesbutton"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/genMealPlanBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:onClick="goToGenDailyMealPlan"
+                android:src="@drawable/gendailymealplanbutton"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/butonTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pickDatesTxttView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Pick Dates"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/genMealPlanTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Generate Meal Plan"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calendarViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="0dp"
+                android:visibility="visible">
+                <!--
+                <com.applandeo.materialcalendarview.CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:pagesColor="#3F51B5"
+                    app:eventsEnabled="false"
+                    app:selectionColor="@android:color/white"
+                    app:selectionLabelColor="#3F51B5"
+                    app:anotherMonthsDaysLabelsColor="#3F51B5"
+                    app:todayLabelColor="#AEEA00"
+                    app:type="many_days_picker" />
+-->
+
+                <com.applandeo.materialcalendarview.CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    app:eventsEnabled="true"
+                    app:headerColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:selectionColor="@color/colorAccent"
+                    app:type="many_days_picker" />
+                <!-- app:datePicker="true" -->
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/colorMenu"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayRecyclerViewLayout">
+
+        <ImageButton
+            android:id="@+id/homeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToHome"
+            app:srcCompat="@drawable/navhomebtn" />
+
+        <ImageButton
+            android:id="@+id/favBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToFav"
+            app:srcCompat="@drawable/navfavbtn" />
+
+        <ImageButton
+            android:id="@+id/addMealPlanBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToCreateMealPlan"
+            app:srcCompat="@drawable/navdailymealplanbtn" />
+
+        <ImageButton
+            android:id="@+id/viewEditRecipesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToViewEditRecipes"
+            app:srcCompat="@drawable/navvieweditmealrecipebtn" />
+
+        <ImageButton
+            android:id="@+id/grocListBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToViewGroceryList"
+            app:srcCompat="@drawable/navgrocerylistenbtn" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

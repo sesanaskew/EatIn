@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mealviewactivity.MealViewActivity">
+
+    <LinearLayout
+        android:id="@+id/pickViewList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMenu"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/viewMealsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToViewMeals"
+            app:srcCompat="@drawable/viewmeal" />
+
+        <ImageButton
+            android:id="@+id/viewRecipeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="gotoViewRecipes"
+            app:srcCompat="@drawable/viewfoodtype" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pickMealListMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickViewList">
+
+        <ImageButton
+            android:id="@+id/breakfastMealsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fadingEdge="horizontal|vertical"
+            android:focusable="auto"
+            android:onClick="goToBreakfastList"
+            android:paddingRight="8dp"
+            app:srcCompat="@drawable/icons8espressocup24" />
+
+        <ImageButton
+            android:id="@+id/horizLunchMealsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fadingEdge="horizontal|vertical"
+            android:focusable="auto"
+            android:onClick="goToLunchList"
+            app:srcCompat="@drawable/icons8lunchbox24" />
+
+        <ImageButton
+            android:id="@+id/horizDinnerMealsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fadingEdge="horizontal|vertical"
+            android:focusable="auto"
+            android:onClick="goToDinnerList"
+            app:srcCompat="@drawable/icons8restaurant24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/horiz_meal_view_recycler_id"
+        android:layout_width="0dp"
+        android:layout_height="616dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_layout_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickMealListMenu">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/horizMealViewRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/navigation_layout_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pickMealListMenu">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation_layout_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Eat In</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_mealplan">Meal Plan</string>
+    <string name="title_mealslist">Meals List</string>
+    <string name="title_grocerylist">Grocery List</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home">Home</string>
+    <string name="plan_meals">Plan Meals</string>
+    <string name="view_meals">View Meals</string>
+    <string name="view_meal_plan">View Meal Plan</string>
+    <string name="pick_dates">Pick Dates</string>
+    <string name="create_meal_list">Meal List</string>
+    <string name="appetizer_name">Appetizer:</string>
+    <string name="entree_name">Entree:</string>
+    <string name="side_name">Side:</string>
+    <string name="dessert_name">Dessert:</string>
+    <string name="instructions_name">Instructions:</string>
+    <string name="title_activity_view_meals">View Meals</string>
+    <string name="title_activity_view_recipes">View Recipes</string>
+    <string name="title_activity_view_calendar">View Calendar</string>
+    <string name="title_activity_gen_mealplan">Create a New Meal Plan</string>
+    <string name="title_activity_create_mealplan">Create Meal Plan</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_view_meals_list">ViewMealsList</string>
+    <string name="title_configuration_settings">Config: </string>
+
+
+    <string name="prev_btn">Go to previous day</string>
+    <string name="next_btn">Go to next day</string>
+    <string name="date_txtvw">Current date</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_config_settings">ConfigSettingsActivity</string>
+    <string name="unknown_nav">Unknown NavigationItem</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>

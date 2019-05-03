@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mealrecipesview.MealRecipesViewActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/view_recipecipesViewRecyclerView_ID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/navigationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_weight="1"
+        android:background="@color/colorMenu"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/homeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToHome"
+            app:srcCompat="@drawable/navhomebtn" />
+
+        <ImageButton
+            android:id="@+id/favBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToFav"
+            app:srcCompat="@drawable/navfavbtn" />
+
+        <ImageButton
+            android:id="@+id/addMealPlanBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToCreateMealPlan"
+            app:srcCompat="@drawable/navdailymealplanbtn" />
+
+        <ImageButton
+            android:id="@+id/viewEditRecipesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToViewEditRecipes"
+            app:srcCompat="@drawable/navvieweditmealrecipebtn" />
+
+        <ImageButton
+            android:id="@+id/grocListBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_transparent"
+            android:onClick="goToViewGroceryList"
+            app:srcCompat="@drawable/navgrocerylistenbtn" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,15 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+    <color name="colorPrimary">#9DC59F</color>
+    <color name="colorPrimaryDark">#519657</color>
+    <color name="colorPrimaryLight">#A8DBAA</color>
+    <color name="colorSecondary">#FFF176</color>
+    <color name="colorSecondaryDark">#CABF45</color>
+    <color name="colorSecondaryLight">#FFFFA8</color>
+    <color name="colorAccent">#ED0927</color>
+    <color name="colorHighlightButton">#2ECC71</color>
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="colorMenu">#D4D3D3</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>
